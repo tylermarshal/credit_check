@@ -19,7 +19,7 @@ def sum_values_over_9(card_number)
   doubled_card_number = double_every_other_digit(card_number)
   doubled_card_number.map do |number|
     if number > 9
-      number.to_s.chars.map(&:to_i).inject(0){|sum,x| sum + x }
+      number.to_s.chars.map(&:to_i).inject(0){|sum,number| sum + number }
     else
       number
     end
@@ -28,7 +28,7 @@ end
 
 def add_all_numbers(card_number)
   sum_digits_card_number = sum_values_over_9(card_number)
-  if sum_digits_card_number.inject(0){|sum,x| sum + x } % 10 == 0
+  if sum_digits_card_number.inject(0){|sum,number| sum + number } % 10 == 0
     puts "The card number is valid."
   else
     puts "The card number is invalid."
