@@ -3,7 +3,7 @@ separate_card_numbers = card_number.each_char.map(&:to_i)
 valid = false
 
 # Your Luhn Algorithm Here
-def double_every_other_digit_16(card_number)
+def double_every_other_digit(card_number)
   card_number[14] = (card_number[14] * 2)
   card_number[12] = (card_number[12] * 2)
   card_number[10] = (card_number[10] * 2)
